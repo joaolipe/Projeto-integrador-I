@@ -1,0 +1,258 @@
+:root{
+--background:#FFFFFF;
+--primary-font:#1d1d1d;
+--secondary-font:#5c5c5c;
+--footer-font:#d1d1d1;
+--primary:#3C8476;
+--secondary:#000000;
+--hover:#5BA387;
+--secondary-button:#FF5367;
+--border:#e4e4e4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--secondary);
+}
+
+#pre-header{
+    width: 100%;
+    height: 2rem;
+    background-color: var(--primary);
+}
+
+.menu{
+    display: flex;
+    position: sticky;
+    top: 0.7rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    background-color: var(--background);
+}
+
+.menu.sticked{
+    top: 0;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 5% 2% 5%;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.imagem{
+    transition: ease 0.5s;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.imagem.reduzida{
+    transition: ease 0.5s;
+    transform: scale(0.8);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: var(--primary-font);
+}
+
+nav ul li:hover{
+    color: var(--hover);
+}
+
+#slide-show, #slide-show div, #slide-show div img{
+    width: 100%;
+    max-height: 30%;
+}   
+
+main{
+    background-color: var(--background);
+    height: 200vh;
+}
+
+footer{
+    color: var(--footer-font);
+    background-color: var(--primary);
+    width: 100%;    
+}
+
+footer #container-footer{
+    display: grid;
+    padding: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer .columns{
+    max-width: 320px;
+}
+
+footer .columns ul{
+    list-style: none;
+}
+
+footer .columns ul a{
+    text-decoration: none;
+    color: var(--footer-font);
+}
+
+footer .columns img{
+    max-height: 40px;
+    filter: invert(1) brightness(1);
+}
+
+footer #columnredes{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+footer hr{
+    width: 90%;
+    background-color: var(--footer-font);
+    height: 1px;
+    border: none;
+}
+
+#logofooter{
+    height: 50px;
+    filter: invert(1) brightness(2);
+    margin-top: 2rem;
+}
+
+#underfooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#destaques{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 30%;
+    background-color: var(--primary);  
+}
+
+#destaques h4{
+}
+
+#container-destaques{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5rem;
+    width: 75%;
+    padding: 5rem;
+}
+
+.cards-destaques{
+    background-color: var(--background);
+    border-color: var(--border);
+    max-width: 350px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: right;
+}
+
+.cards-destaques p{
+z-index: 1000;
+font-size: 15pt;
+}
+
+.cards-destaques div{
+    height: 100%;
+    width: 60%;
+    overflow: hidden;
+}
+
+.imgsdestaques{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+    footer{
+        font-size: 0.8rem;
+    }
+
+    footer .columns{
+        margin-top: 1rem;
+    }   
+    
+    footer .columns img{
+        height: 30px;
+    }
+
+    footer #container-footer{
+        display: grid;
+        padding: 3rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .menu{
+        position: static;
+    }
+
+    .menu img{
+        padding-top: 1rem;
+    }
+    
+    nav{
+        position: relative;
+    }
+
+    nav, nav ul{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul{
+        padding: 2rem 0 2rem 0;
+        align-items: center;
+    }
+}
+
+@media (min-width: 501px) {
+    nav ul{
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width: 600px) {
+    nav ul{
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 700px) {
+    nav ul{
+        font-size: 0.9rem;
+    }
+}
